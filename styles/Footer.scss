@@ -1,11 +1,12 @@
 .footer-container {
   bottom: 0;
-  position: absolute;
+  position: sticky;
   background-color: grey;
   width: 100%;
 
   svg {
     height: 30px;
     width: 30px;
+    margin: 5px;
   }
 }
