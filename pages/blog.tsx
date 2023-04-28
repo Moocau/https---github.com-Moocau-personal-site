@@ -13,6 +13,7 @@ export default function Blog({ files }: BlogProps) {
           <div key={file.fileName}>
             <h1>{file.metadata.title}</h1>
             <p>{file.metadata.description}</p>
+            <p>{file.metadata.publishedDate}</p>
             <div dangerouslySetInnerHTML={{__html: file.processedContent }}/>
           </div>
         );

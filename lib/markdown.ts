@@ -12,6 +12,7 @@ export interface BlogFile {
   fileName: string;
   metadata: Record<string, any>;
   processedContent: string;
+  publishedDate: Date;
 }
 
 export async function getBlogFiles( directory: string ): Promise<BlogFile[]> {
@@ -30,10 +31,15 @@ export async function getBlogFiles( directory: string ): Promise<BlogFile[]> {
         .use(remarkGfm)
         .use(html)
         .process(content);
-      return { id, fileName, metadata, processedContent: processedContent.toString()};
+      const publishedDate = metadata.publishedDate;
+      return { id, fileName, metadata, publishedDate, processedContent: processedContent.toString()};
     })
   );
 
-  return allPosts;
+  const sortedPosts = allPosts.sort((a, b) => {
+    return a.publishedDate < b.publishedDate ? 1 : -1;
+  });
+
+  return sortedPosts;
 }
 
