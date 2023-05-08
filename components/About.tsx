@@ -5,8 +5,8 @@ export const About = () => {
       <h2>Professional</h2>
       <p>
         I'm a recovering Financial Accounting expert, giving the world of
-        Software Engineering my best shot. I am from Canada but am now living in
-        Tokyo, Japan!
+        Software Engineering my best shot. I am from Canada 🍁 but am now living in
+        Tokyo, Japan 🗾!
       </p>
       <p>
         As a full-stack developer with an extensive background in finance with
@@ -23,11 +23,11 @@ export const About = () => {
       <h2>Personal</h2>
       <ul>
         <li>I love the outdoors; 🥾🏞️🗻 hiking, ⛺ camping, 🚑 tripping and falling, you name it!</li>
-        <li>Building and painting gunpla models.</li>
-        <li>Cooking and eating delicious food.</li>
-        <li>Going to cafes! If you ever need recommendations in Tokyo, let me know.</li>
-        <li>Watching horrible movies (on purpose).</li>
-        <li>Thrifting! Check out my projects for more info.</li>
+        <li>Building and painting 🤖 gunpla models.</li>
+        <li>Cooking 👩🏻‍🍳 and eating 🍣 delicious food.</li>
+        <li>Going to cafes ☕! If you ever need recommendations in Tokyo, let me know!</li>
+        <li>Watching horrible movies 🍿 (on purpose).</li>
+        <li>Thrifting 👚! Check out my projects for more info.</li>
       </ul>
     </div>
   );

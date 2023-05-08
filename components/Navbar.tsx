@@ -1,15 +1,16 @@
 import React from 'react';
 import Router from 'next/router';
+import Link from 'next/link';
 
 
 export const Navbar = () => {
 
   return (
     <div className='navigation-bar'>
-      <span>Robyn Snook</span>
-      <span>About</span>
-      <span>Projects</span>
-      <span>Blog</span>
+      <Link href='/'>Robyn Snook</Link>
+      <Link href='/'>About</Link>
+      <Link href='/projects'>Projects</Link>
+      <Link href='/blog'>Blog</Link>
     </div>
   )
 }
