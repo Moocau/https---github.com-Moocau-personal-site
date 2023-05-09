@@ -1,8 +1,10 @@
+@import 'styles/Home.module.scss';
+
 .navigation-bar {
   height: 40px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: grey;
+  background-color: $mintGreenNavigation;
 }

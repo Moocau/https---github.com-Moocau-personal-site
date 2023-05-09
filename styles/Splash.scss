@@ -1,14 +1,26 @@
+@import 'styles/Home.module.scss';
+
 .splash-welcome-mat {
-  margin-top: 50px;
   display: flex;
+  background-color: $pinboard;
+  background-image: radial-gradient($pinboardLight 1px, transparent 1px),radial-gradient($pinboardDark 1px, transparent 1px);
+  background-size: calc(15 * 1px) calc(15 * 1px);
+  background-position: 0 0,calc(7 * 1px) calc(7 * 1px);
+
+  .splash-container {
+    margin: 50px 0;
+    display: flex;
+  }
   
   #splash-image {
-    border: 7px solid black;
-    border-bottom: 70px solid #000000;
-    transform: rotate(-6deg);
+    border: 7px solid $offWhite;
+    border-bottom: 60px solid $offWhite;
   }
 
-  #splash-image:hover {
-    transform: rotate(0deg)
+  .splash-message {
+    padding: 15px;
+    background-color: $offWhite;
+    background-size: 30px 30px;
+    background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, $offWhite 1px, $offWhite);
   }
 }

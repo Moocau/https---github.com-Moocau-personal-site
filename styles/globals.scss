@@ -1,5 +1,8 @@
+@import 'styles/Home.module.scss';
+
 body {
   all: unset;
+  color: $darkTextColor
 }
 
 .page-container {

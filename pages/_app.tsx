@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className='page-container'>
       <Navbar />
-      <div>
+      <div className='splash-welcome-mat'>
         {router.pathname === '/' && <Splash />}
       </div>
       <div>

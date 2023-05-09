@@ -1,7 +1,9 @@
+@import 'styles/Home.module.scss';
+
 .footer-container {
   bottom: 0;
   position: sticky;
-  background-color: grey;
+  background-color: $mintGreenNavigation;
   width: 100%;
 
   svg {
