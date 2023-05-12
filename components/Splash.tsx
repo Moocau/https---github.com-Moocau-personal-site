@@ -49,8 +49,9 @@ export const Splash = () => {
   };
 
   const onMouseLeaveHandler = (e: React.MouseEvent) => {
-    if (poloroid.current !== null)
+    if (poloroid.current !== null) {
       poloroid.current.style.transform = newStyle.transform;
+    }
     previousXPosition = 0;
   };
 
@@ -70,17 +71,19 @@ export const Splash = () => {
 
   return (
     <div className="splash-container">
-      <div className="image-container" ref={poloroid} style={newStyle}>
-        <Image
-          src="/splash-image.jpeg"
-          alt="image of me in the mountains"
-          width="400"
-          height="400"
-          id="splash-image"
-          onMouseEnter={onMouseEnterHandler}
-          onMouseMove={onMouseMoveHandler}
-          onMouseLeave={onMouseLeaveHandler}
-        />
+      <div className="pushpin-image">
+        <div className="image-container" ref={poloroid} style={newStyle}>
+          <Image
+            src="/splash-image.jpeg"
+            alt="image of me in the mountains"
+            width="400"
+            height="400"
+            id="splash-image"
+            onMouseEnter={onMouseEnterHandler}
+            onMouseMove={onMouseMoveHandler}
+            onMouseLeave={onMouseLeaveHandler}
+          />
+        </div>
       </div>
       <div className="splash-message">
         <h1>Greetings, I'm Robyn Snook</h1>

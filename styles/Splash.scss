@@ -2,25 +2,30 @@
 
 .splash-welcome-mat {
   display: flex;
-  background-color: $pinboard;
-  background-image: radial-gradient($pinboardLight 1px, transparent 1px),radial-gradient($pinboardDark 1px, transparent 1px);
-  background-size: calc(15 * 1px) calc(15 * 1px);
-  background-position: 0 0,calc(7 * 1px) calc(7 * 1px);
+  background: linear-gradient(135deg, $pinboard 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+  linear-gradient(225deg, $pinboard 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color: $pinboard;
+  background-size: 64px 128px;
 
   .splash-container {
     margin: 50px 0;
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 50px;
   }
   
   #splash-image {
-    border: 7px solid $offWhite;
-    border-bottom: 60px solid $offWhite;
+    border: 7px solid rgb(71, 34, 34);
   }
 
   .splash-message {
+    width: 50vw;
+    margin-right: 50px;
+    font-family: $blockText;
     padding: 15px;
-    background-color: $offWhite;
-    background-size: 30px 30px;
-    background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, $offWhite 1px, $offWhite);
+    font-size: 20px;
+    background-color: $mintGreenNavigation;
+    border: 10px inset rgb(71, 34, 34);
   }
 }

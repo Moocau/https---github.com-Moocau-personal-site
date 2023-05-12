@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import '../styles/Navbar.scss'
 import '../styles/Footer.scss'
 import '../styles/Splash.scss'
+import '../styles/Projects.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

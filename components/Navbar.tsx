@@ -7,10 +7,18 @@ export const Navbar = () => {
 
   return (
     <div className='navigation-bar'>
-      <Link href='/'>Robyn Snook</Link>
-      <Link href='/'>About</Link>
-      <Link href='/projects'>Projects</Link>
-      <Link href='/blog'>Blog</Link>
+      <div className='navigation-items'>
+        <div className='navbar-item-outer'>
+          <div className='navbar-item-inner'>
+            <Link href='/'>Robyn Snook</Link>
+          </div>
+        </div>
+        <ul>
+          <li><Link href='/'>About</Link></li>
+          <li><Link href='/projects'>Projects</Link></li>
+          <li><Link href='/blog'>Blog</Link></li>
+        </ul>
+      </div>
     </div>
   )
 }
