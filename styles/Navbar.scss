@@ -1,10 +1,66 @@
 @import 'styles/Home.module.scss';
 
 .navigation-bar {
-  height: 40px;
+  height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $mintGreenNavigation;
+}
+
+.navigation-items {
+  width: 100%;
+  display: flex;
+  max-width: 960px;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: $blockText;
+  }
+
+  .navbar-item-inner {
+    padding: 7px;
+    background:
+      linear-gradient(transparent, transparent) bottom left / 20px 2px,
+      linear-gradient(transparent, transparent) bottom left / 2px 20px,
+      linear-gradient(transparent, transparent) top right / 20px 2px,
+      linear-gradient(transparent, transparent) top right / 2px 20px;
+    background-repeat: no-repeat;
+  }
+
+  .navbar-item-inner:hover {
+    padding: 7px;
+    background:
+      linear-gradient(#CF2103, #4F0400) bottom left / 20px 2px,
+      linear-gradient(#4F0400, #CF2103) bottom left / 2px 20px,
+      linear-gradient(#CF2103, #4F0400) top right / 20px 2px,
+      linear-gradient(#4F0400, #CF2103) top right / 2px 20px;
+    background-repeat: no-repeat;
+
+    a {
+      background: linear-gradient(
+        to bottom,
+        #CF2103,
+        #CF2103 50%,
+        #4F0400 50%,
+        #4F0400
+      );
+      background-size: 100% 2px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      list-style-type: none;
+    }
+  }
 }
