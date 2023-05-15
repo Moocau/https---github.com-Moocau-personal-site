@@ -17,11 +17,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className='page-container'>
       <Navbar />
       <div className='splash-welcome-mat'>
+        <div className='background'></div>
         {router.pathname === '/' && <Splash />}
       </div>
-      <div>
+      {/* <div>
         {router.pathname === '/' && <About />}
-      </div>
+      </div> */}
         <Component {...pageProps} />
       <Footer />
     </div>

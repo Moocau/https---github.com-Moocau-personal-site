@@ -71,20 +71,6 @@ export const Splash = () => {
 
   return (
     <div className="splash-container">
-      <div className="pushpin-image">
-        <div className="image-container" ref={poloroid} style={newStyle}>
-          <Image
-            src="/splash-image.jpeg"
-            alt="image of me in the mountains"
-            width="400"
-            height="400"
-            id="splash-image"
-            onMouseEnter={onMouseEnterHandler}
-            onMouseMove={onMouseMoveHandler}
-            onMouseLeave={onMouseLeaveHandler}
-          />
-        </div>
-      </div>
       <div className="splash-message">
         <h1>Greetings, I'm Robyn Snook</h1>
         <h2>Software Engineer by day, Food Connoisseuse by night</h2>
