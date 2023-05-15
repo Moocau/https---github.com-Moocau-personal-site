@@ -13,7 +13,7 @@ export const Navbar = () => {
         </div>
         <ul>
           <div className='navbar-item-inner'>
-            <li><Link href='/'>About</Link></li>
+            <li><Link href='/about'>About</Link></li>
           </div>
           <div className='navbar-item-inner'>
             <li><Link href='/projects'>Projects</Link></li>

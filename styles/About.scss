@@ -1,0 +1,61 @@
+@import 'styles/Home.module.scss';
+
+.target-image-container {
+  width: 369px;
+  height: 500px;
+  border-radius: 5px;
+  overflow: hidden;  
+  position: relative;
+  margin-left: 2em;
+}
+
+.about-background{
+  background-image: url('/bg2.webp');
+}
+
+.about-container {
+  display: flex;
+
+  .about-content-container {
+    height: calc(100vh - 100px);
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-me-text {
+    flex-direction: column;
+    background-color: rgba($mintGreenNavigation, .8);
+    width: 60vw;
+    justify-content: center;
+    align-items: left;
+    overflow-y: auto;
+    height: 100%;
+    color: $white;
+    padding: 0 2em;
+
+    .background-container {
+      margin-left: 10px;
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    .skills-container {
+      display: flex;
+      width: 100%;
+
+      li:first-of-type {
+        list-style: none;
+        margin: 0;
+      }
+      
+      li {
+        margin-left: 50px;
+      }
+    }
+  }
+}

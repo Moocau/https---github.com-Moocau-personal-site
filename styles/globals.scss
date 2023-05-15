@@ -2,10 +2,36 @@
 
 body {
   all: unset;
-  color: $darkTextColor
+  font-family: $mainBody;
+
+  h1, h2, h3, h4, h5, p, li, ul {
+    margin: 0;
+  }
 }
 
 .page-container {
   display:flex;
   flex-direction: column;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(1px);
+  height: calc(100vh - 100px);
+  width: 100%;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+  border-radius: 3px;
+	background-color: $darkErrorRed;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 3px;
+	background-color: $errorRed;
 }
