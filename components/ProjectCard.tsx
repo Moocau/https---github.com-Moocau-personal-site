@@ -1,20 +1,14 @@
 import React from 'react';
-import { getBlogFiles, BlogFile } from '@/lib/markdown';
+import { getMarkdownFiles, MarkdownFiles } from '@/lib/markdown';
 import Image from 'next/image';
 
 interface Props {
-  files: BlogFile[];
+  files: MarkdownFiles[];
   setSingleView: Function;
   setMoreDetails: Function;
 }
 
 export const ProjectCard = ({ files, setSingleView, setMoreDetails }: Props) => {
-
-  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
-    setSingleView(true);
-    setMoreDetails();
-  }
 
   return (
     <div className='project-card-container'>

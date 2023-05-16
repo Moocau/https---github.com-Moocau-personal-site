@@ -1,12 +1,19 @@
 import React from 'react';
-import { getBlogFiles, BlogFile } from '@/lib/markdown';
+import { MarkdownFile } from '@/lib/singleMarkdown';
 import Image from 'next/image';
 
 interface Props {
-  files: BlogFile[];
+  singleProject: MarkdownFile;
   setSingleView: Function;
   setMoreDetails: Function;
 }
 
-export const SingleProject = ({ files, setSingleView, setMoreDetails }: Props) => {
+export const SingleProject = ({ singleProject, setSingleView, setMoreDetails }: Props) => {
+  return (
+  <div className='project-container'>
+    <div className='project-card'>
+    <h1>{singleProject.metadata.title}</h1>
+    </div>
+  </div>
+  )
 }

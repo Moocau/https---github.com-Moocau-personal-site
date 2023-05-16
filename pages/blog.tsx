@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
-import { getBlogFiles, BlogFile } from '@/lib/markdown';
+import { getMarkdownFiles, MarkdownFiles } from '@/lib/markdown';
 
 interface BlogProps {
-  files: BlogFile[];
+  files: MarkdownFiles[];
 }
 
 export default function Blog({ files }: BlogProps) {
@@ -23,6 +23,6 @@ export default function Blog({ files }: BlogProps) {
 };
 
 export const getStaticProps = async () => {
-  const files = await getBlogFiles('content/blog');
+  const files = await getMarkdownFiles('content/blog');
   return {props: { files }};
 };

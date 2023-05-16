@@ -7,7 +7,7 @@ import html from 'remark-html';
 
 const root = process.cwd();
 
-export interface BlogFile {
+export interface MarkdownFiles {
   id: string;
   fileName: string;
   metadata: Record<string, any>;
@@ -15,7 +15,7 @@ export interface BlogFile {
   publishedDate: Date;
 }
 
-export async function getBlogFiles( directory: string ): Promise<BlogFile[]> {
+export async function getMarkdownFiles ( directory: string ): Promise<MarkdownFiles[]> {
   const directoryPath = path.join(root, directory)
   const dirents = fs.readdirSync(directoryPath, { withFileTypes: true });
   const fileNames = dirents
