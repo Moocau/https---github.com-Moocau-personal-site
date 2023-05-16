@@ -1,29 +1,27 @@
 import { getBlogFiles, BlogFile } from '@/lib/markdown';
-import Link from 'next/link';
+import { ProjectCard } from '@/components/projectCard';
+import { useState } from 'react';
 
 interface BlogProps {
   files: BlogFile[];
 }
 
-
 export default function Projects ({ files }: BlogProps) {
+  const [singleView, setSingleView] = useState<boolean>(false);
+  const [moreDetails, setMoreDetails] = useState<string | undefined>('');
+
   return (
     <div className='project-card-container'>
-      {files.map((file) => {
-        return (
-          <div key={file.fileName}>
-            <h1>{file.metadata.title}</h1>
-            <a href={file.metadata.link}>{file.metadata.link}</a>
-            <p>{file.metadata.description}</p>
-            <p>{file.metadata.longDescription}</p>
-            <p>{file.metadata.publishedDate}</p>
-            <div dangerouslySetInnerHTML={{__html: file.processedContent }}/>
-          </div>
-        );
-      })}
+      <div className='projects-background background'></div>
+      <div className='projects-cards'>
+        <div className='project-header'>
+          <h1>Project Information</h1>
+        </div>
+        {!singleView && <ProjectCard files={files} setSingleView={setSingleView} setMoreDetails={setMoreDetails} />}
+      </div>
     </div>
   );
-}
+};
 
 export const getStaticProps = async () => {
   const files = await getBlogFiles('content/projects');

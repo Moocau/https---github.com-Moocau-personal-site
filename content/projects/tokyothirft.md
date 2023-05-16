@@ -5,6 +5,7 @@ longDescription: With a front end in Next.js and TypeScript, integrating Google 
 link: https://tokyothrift.org
 gitHub: https://github.com/tokyothrift
 publishedDate: 2023/04/06
+image: /tokyo-thrift.png
 ---
 
 - Implemented a seamless and efficient Azure continuous deployment pipeline, ensuring continuous integration and deployment.
