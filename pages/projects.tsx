@@ -1,5 +1,5 @@
 import { getMarkdownFiles, MarkdownFiles } from '@/lib/markdown';
-import { ProjectCard } from '@/components/projectCard';
+import { ProjectCard } from '@/components/ProjectCard';
 import { SingleProject } from '@/components/SingleProject';
 import { useState, useEffect } from 'react';
 
@@ -11,12 +11,14 @@ export default function Projects ({ files }: MarkdownProps) {
   const [singleView, setSingleView] = useState<boolean>(false);
   const [moreDetails, setMoreDetails] = useState<string | undefined>(undefined);
   const [singleProject, setSingleProject] = useState<any>('');
+  const [complete, setComplete] = useState<boolean>(false);
 
   const getSingleProject = async (file: string) => {
     const res = await fetch(`/api/singlemarkdown?singleFile=${file}`);
     if (res.status === 200) {
       const singleProjectInformation = await res.json();
       setSingleProject(singleProjectInformation);
+      setComplete(true);
     }
   }
 
@@ -34,7 +36,7 @@ export default function Projects ({ files }: MarkdownProps) {
           <h1>Project Information</h1>
         </div>
         {!singleView && <ProjectCard files={files} setSingleView={setSingleView} setMoreDetails={setMoreDetails} />}
-        {singleView && <SingleProject singleProject={singleProject} setSingleView={setSingleView} setMoreDetails={setMoreDetails} />}
+        {singleView && <SingleProject singleProject={singleProject} setSingleView={setSingleView} setMoreDetails={setMoreDetails} complete={complete} />}
       </div>
     </div>
   );
