@@ -22,6 +22,7 @@ export const ProjectCard = ({ files, setSingleView, setMoreDetails }: Props) => 
           <a href={file.metadata.link}>{file.metadata.link}</a>
           <p>{file.metadata.description}</p>
           <p>{file.metadata.publishedDate}</p>
+          <p id='languages'>{file.metadata.languages}</p>
           <div id={file.fileName} onClick={(e: React.MouseEvent<HTMLElement>) => {
                e.preventDefault();
                setSingleView(true);

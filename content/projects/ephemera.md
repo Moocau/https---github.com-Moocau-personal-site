@@ -6,6 +6,7 @@ link: https://ephemera-client.herokuapp.com/
 gitHub: https://github.com/Ephemera-Space/Ephemera
 publishedDate: 2023/02/20
 image: /ephemera.png
+languages: React, css, JavaScript
 ---
 
 - Designed and developed front-end experience using React and css for styling.

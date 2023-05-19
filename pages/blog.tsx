@@ -8,6 +8,7 @@ interface BlogProps {
 export default function Blog({ files }: BlogProps) {
   return (
     <div className="blog-container">
+      <div className='blog-background background'></div>
       {files.map((file) => {
         return (
           <div key={file.fileName}>

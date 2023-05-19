@@ -32,11 +32,13 @@ export default function Projects ({ files }: MarkdownProps) {
     <div className='project-card-container'>
       <div className='projects-background background'></div>
       <div className='projects-cards'>
-        <div className='project-header'>
-          <h1>Project Information</h1>
-        </div>
+        {!singleView &&
+          <div className='project-header'>
+            <h1>Project Information</h1>
+          </div>
+        }
         {!singleView && <ProjectCard files={files} setSingleView={setSingleView} setMoreDetails={setMoreDetails} />}
-        {singleView && <SingleProject singleProject={singleProject} setSingleView={setSingleView} setMoreDetails={setMoreDetails} complete={complete} />}
+        {singleView && <SingleProject singleProject={singleProject} setSingleView={setSingleView} setMoreDetails={setMoreDetails} complete={complete} setComplete={setComplete} />}
       </div>
     </div>
   );

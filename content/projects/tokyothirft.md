@@ -6,6 +6,7 @@ link: https://tokyothrift.org
 gitHub: https://github.com/tokyothrift
 publishedDate: 2023/04/06
 image: /tokyo-thrift.png
+languages: Next.js, Sass, TypeScript, Python + Django
 ---
 
 - Implemented a seamless and efficient Azure continuous deployment pipeline, ensuring continuous integration and deployment.
