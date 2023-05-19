@@ -10,18 +10,22 @@
   .splash-container {
     height: calc(100vh - 100px);
     position: absolute;
-    width: 100%;
-    background-color: rgba($mintGreenNavigation, .6);
-    width: 60vw;
+    background-color: rgba($mintGreenNavigation, .8);
+    width: 65vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
   }
 
   .splash-message {
     font-family: $mainBody;
     padding: 2em;
-    font-size: 30px;
+    font-size: 22px;
     color: white;
+
+    p, h1, h2 {
+      margin-bottom: 10px;
+    }
   }
 }
