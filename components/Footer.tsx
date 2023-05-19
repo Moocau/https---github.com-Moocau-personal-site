@@ -71,8 +71,8 @@ export const Footer = () => {
             </svg>
           </div>
         </div>
-        <span>© 2023 Robyn Snook</span>
       </div>
+      <span>© 2023 Robyn Snook</span>
     </div>
   );
 };

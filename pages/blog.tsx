@@ -9,17 +9,21 @@ export default function Blog({ files }: BlogProps) {
   return (
     <div className="blog-container">
       <div className='blog-background background'></div>
-      {files.map((file) => {
-        return (
-          <div key={file.fileName}>
-            <h1>{file.metadata.title}</h1>
-            <p>{file.metadata.description}</p>
-            <p>{file.metadata.publishedDate}</p>
-            <div dangerouslySetInnerHTML={{__html: file.processedContent }}/>
-          </div>
-        );
-      })}
+      <div className='blog-post-container'>
+      <h1>ACTIVITY RECORDS</h1>
+        {files.map((file) => {
+          return (
+            <div key={file.fileName} className='blog-post'>
+              <h1>RECORD TITLE: {file.metadata.title}</h1>
+              <p><i>RELEVANT TAGS: {file.metadata.topics}</i></p>
+              <p><i>RECORD DATE: {file.metadata.publishedDate}</i></p>
+              <div dangerouslySetInnerHTML={{__html: file.processedContent }}/>
+              <div className='blog-post-separator'></div>
+            </div>
+          );
+        })}
     </div>
+  </div>
   );
 };
 

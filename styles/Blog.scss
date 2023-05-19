@@ -1,5 +1,36 @@
 @import 'styles/Home.module.scss';
 
-.blog-background{
+.blog-container {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-background {
   background-image: url('/bg4.webp');
+}
+
+.blog-post-container {
+  height: calc(100vh - 100px);
+  position: absolute;
+  width: 100%;
+  background-color: rgba($mintGreenNavigation, .9);
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  color: $white;
+
+  .blog-post{
+    width: 90%;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .blog-post-separator {
+    margin: 20px 10px;
+    border-top: 2px solid $white;
+  }
 }

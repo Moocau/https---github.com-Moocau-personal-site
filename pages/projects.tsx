@@ -34,7 +34,7 @@ export default function Projects ({ files }: MarkdownProps) {
       <div className='projects-cards'>
         {!singleView &&
           <div className='project-header'>
-            <h1>Project Information</h1>
+            <h1>PROJECT INFORMATION</h1>
           </div>
         }
         {!singleView && <ProjectCard files={files} setSingleView={setSingleView} setMoreDetails={setMoreDetails} />}
