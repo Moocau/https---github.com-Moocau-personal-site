@@ -47,8 +47,8 @@ export default class BlogPostLoader {
 
   getPosts(start:any, count:any) {
     if (start >= this.allPosts.length) return null;
-    if (start + count > this.allPosts.length) count = this.allPosts.length - start - 1;
-
+    if (start + count > this.allPosts.length) count = this.allPosts.length;
+    
     return this.allPosts.slice(start, start + count);
   };
 }

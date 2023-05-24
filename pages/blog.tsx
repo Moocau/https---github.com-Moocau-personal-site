@@ -80,7 +80,7 @@ const loader = new PostLoader('content/blog');
 
 export const getStaticProps = async () => {
   await loader.loadAllPosts();
-  const files = loader.getPosts(0, 2);
+  const files = loader.getPosts(0, 3);
 
   return { props: { files } };
 };
