@@ -34,7 +34,7 @@ export const SingleProject = ({ singleProject, setSingleView, setMoreDetails, co
         </div>
         <div className='return' onClick={() => {
           setSingleView(false);
-          setMoreDetails('');
+          setMoreDetails(undefined);
           setComplete(false);
         }}>
           <span>Return</span>
