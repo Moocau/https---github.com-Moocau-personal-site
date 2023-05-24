@@ -33,6 +33,7 @@
     background-position: 0 0,0 0,100% 80%;
     background-size: 100% 2px;
     background-image: linear-gradient(180deg,rgba(#CF2103,.6),rgba(#CF2103,.6)),linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,.1)),url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDI5M2RiYmY0M2VmZTEzM2IzNmU3OGMxMWIxMmQ3YmJkNDU5MmY3NSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/3ohzdHW2xW3URpfGCI/giphy.gif");
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

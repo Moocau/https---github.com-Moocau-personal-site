@@ -7,7 +7,7 @@ interface MarkdownProps {
   files: MarkdownFiles[];
 }
 
-export default function Projects ({ files }: MarkdownProps) {
+export default function Projects({ files }: MarkdownProps) {
   const [singleView, setSingleView] = useState<boolean>(false);
   const [moreDetails, setMoreDetails] = useState<string | undefined>(undefined);
   const [singleProject, setSingleProject] = useState<any>('');
@@ -20,31 +20,45 @@ export default function Projects ({ files }: MarkdownProps) {
       setSingleProject(singleProjectInformation);
       setComplete(true);
     }
-  }
+  };
 
   useEffect(() => {
     if (moreDetails !== undefined) {
       getSingleProject(moreDetails);
     }
-  }, [moreDetails])
+  }, [moreDetails]);
 
   return (
     <div className='project-card-container'>
       <div className='projects-background background'></div>
       <div className='projects-cards'>
-        {!singleView &&
+        {!singleView && (
           <div className='project-header'>
             <h1>PROJECT INFORMATION</h1>
           </div>
-        }
-        {!singleView && <ProjectCard files={files} setSingleView={setSingleView} setMoreDetails={setMoreDetails} />}
-        {singleView && <SingleProject singleProject={singleProject} setSingleView={setSingleView} setMoreDetails={setMoreDetails} complete={complete} setComplete={setComplete} />}
+        )}
+        {!singleView && (
+          <ProjectCard
+            files={files}
+            setSingleView={setSingleView}
+            setMoreDetails={setMoreDetails}
+          />
+        )}
+        {singleView && (
+          <SingleProject
+            singleProject={singleProject}
+            setSingleView={setSingleView}
+            setMoreDetails={setMoreDetails}
+            complete={complete}
+            setComplete={setComplete}
+          />
+        )}
       </div>
     </div>
   );
-};
+}
 
 export const getStaticProps = async () => {
   const files = await getMarkdownFiles('content/projects');
-  return {props: { files }};
+  return { props: { files } };
 };
