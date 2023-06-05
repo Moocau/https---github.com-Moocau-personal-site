@@ -13,7 +13,6 @@
     background-color: rgba($mintGreenNavigation, .8);
     width: 65vw;
     display: flex;
-    justify-content: center;
     align-items: center;
     overflow-y: auto;
   }
@@ -26,6 +25,18 @@
 
     p, h1, h2 {
       margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px){
+  .splash-welcome-mat {
+    .splash-container {
+      width: 100vw;
+
+      .splash-message {
+        font-size: 1em;
+      }
     }
   }
 }

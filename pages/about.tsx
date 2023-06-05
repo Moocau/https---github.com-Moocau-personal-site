@@ -13,6 +13,13 @@ export default function About() {
           ></Image>
         </div>
         <div className='about-me-text'>
+          <div className='mobile-target-image-container'>
+            <Image
+              src='/robyn_scanlines.png'
+              alt='photo of Robyn Snook in kyoto'
+              fill={true}
+            ></Image>
+          </div>
           <h1>MISSION REPORT</h1>
           <h2>
             TARGET: <i>Robyn Snook</i>{' '}
