@@ -11,7 +11,7 @@ interface Props {
 export const ProjectCard = ({ files, setSingleView, setMoreDetails }: Props) => {
 
   return (
-    <div className='project-card-container'>
+    <div className='card-container'>
     {files.map((file) => {
       return (
         <div 
