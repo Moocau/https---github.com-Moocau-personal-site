@@ -30,17 +30,15 @@ export const Hamburger = () => {
   return (
     <div className='mobile-navigation-bar'>
       <div className='mobile-navigation-items'>
-        <div className='navbar-item-inner'>
-          <Link href='/'>Robyn Snook</Link>
-        </div>
+        <Link href='/'>Robyn Snook</Link>
         <button id="menu-toggle" className={showMenu ? 'menu-cross' : 'menu-hamburger'} onClick={toggleMenu}></button>
         <label className="menu-button-container" htmlFor="menu-toggle">
           <div className="menu-button"></div>
         </label>
         <ul id='hamburger' className='hamburger'>
-          <li><Link href='/about'>About</Link></li>
-          <li><Link href='/projects'>Projects</Link></li>
-          <li><Link href='/blog'>Blog</Link></li>
+          <li><Link href='/about' onClick={hideMenu}>About</Link></li>
+          <li><Link href='/projects' onClick={hideMenu}>Projects</Link></li>
+          <li><Link href='/blog' onClick={hideMenu}>Blog</Link></li>
         </ul>
       </div>
     </div>
