@@ -29,7 +29,7 @@ jobs:
         with:
           registry: elestriel.azurecr.io
           username: ${{ secrets.ROBYNPORTFOLIO_REGISTRY_USERNAME }}
-          password: ${{ secrets.ROBYNPORTFOLIO_REGISTRY_USERNAME }}
+          password: ${{ secrets.ROBYNPORTFOLIO_REGISTRY_PASSWORD }}
 
       - name: Build and push container image to registry
         uses: docker/build-push-action@v2
