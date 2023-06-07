@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Press+Start+2P&display=swap');
-$blockText: 'Press Start 2P', cursive;
-$mainBody: 'Kanit', sans-serif;
+// @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Press+Start+2P&display=swap');
+
+
+$blockText: var(--press_start_2p-font);
+$mainBody: var(--kanit-font);
 
 $white: white;
 $errorRed: #CF2103;

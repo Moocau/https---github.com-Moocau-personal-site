@@ -13,6 +13,21 @@ import '../styles/Projects.scss';
 import '../styles/About.scss';
 import '../styles/Blog.scss';
 import '../styles/Hamburger.scss';
+import { Kanit, Press_Start_2P } from 'next/font/google';
+
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: '400',
+  style: 'normal', 
+  variable: '--font-kanit'
+})
+
+const press_start_2p = Press_Start_2P({
+  subsets: ['latin'],
+  weight: '400',
+  style: 'normal', 
+  variable: '--font-press_start_2p'
+})
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -33,6 +48,12 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className='page-container'>
+      <style jsx global>{`
+        :root {
+          --kanit-font: ${kanit.style.fontFamily};
+          --press_start_2p-font: ${press_start_2p.style.fontFamily};
+        }`
+      }</style>
       {typeof mobile !== 'undefined' ? (mobile? <Hamburger /> : <Navbar />) : null}
       {router.pathname === '/' && <Splash />}
       <Component {...pageProps} />

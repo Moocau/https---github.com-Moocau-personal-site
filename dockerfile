@@ -2,12 +2,12 @@ FROM node:18-alpine AS deps
 RUN apk -UvX http://dl-4.alpinelinux.org/alpine/edge/main add -u nodejs
 WORKDIR /app
 
-COPY blog/package*.json ./
+COPY portfolio-website/package*.json ./
 RUN npm install --production
 
 FROM node:18-alpine AS builder
 WORKDIR /app
-COPY ./blog ./
+COPY ./portfolio-website ./
 COPY --from=deps /app/node_modules ./node_modules
 
 ENV NEXT_TELEMETRY_DISABLED 1
@@ -25,7 +25,7 @@ RUN adduser --system --uid 1001 nextjs
 
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/posts ./posts
+COPY --from=builder /app/content ./content
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 

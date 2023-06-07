@@ -23,7 +23,6 @@ export default function Projects({ files }: MarkdownProps) {
   };
 
   useEffect(() => {
-    console.log(moreDetails)
     if (moreDetails !== undefined) {
       getSingleProject(moreDetails);
     }
