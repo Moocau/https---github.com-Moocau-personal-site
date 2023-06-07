@@ -1,0 +1,42 @@
+name: Trigger auto deployment for robyn-portfolio
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/robyn-portfolio-AutoDeployTrigger-da577294-0058-4917-8ca0-6c753f52e87d.yml'
+
+  # Allow mannually trigger 
+  workflow_dispatch:
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.ROBYNPORTFOLIO_AZURE_CREDENTIALS }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          appSourcePath: ${{ github.workspace }} 
+          registryUrl: elestriel.azurecr.io
+          registryUsername: ${{ secrets.ROBYNPORTFOLIO_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.ROBYNPORTFOLIO_REGISTRY_PASSWORD }}
+          containerAppName: robyn-portfolio
+          resourceGroup: Robyn
+          imageToBuild: elestriel.azurecr.io/robyn-portfolio:${{ github.sha }}
+          
+
+     
+
